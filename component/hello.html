@@ -1,45 +1,46 @@
 <polymer-element name="hello-element" attributes="count name">
-<template>
-  <h1>{{count}} Hello {{name}}</h1>
-  <button on-click="{{remove}}">remove</button>
-</template>
-<script>
-  Polymer('hello-element', {
+  <template>
+    <h1>{{count}} Hello {{name}}</h1>
+    <button on-click="{{remove}}">remove</button>
+  </template>
+  <script>
+    Polymer('hello-element', {
 
-    // element is created
-    created: function() {
-      console.log('created!');
-    },
+      // element is created
+      created: function() {
+        console.log('created!');
+      },
 
-    // element ready for DOM
-    domReady: function() {
-      console.log('domReady!');
-    },
+      // element ready for DOM
+      domReady: function() {
+        console.log('domReady!');
+      },
 
-    // element fully prepared
-    ready: function() {
-      console.log('all set to go!');
-      this.cycle = setInterval(function(){
-        this.setAttribute('count', this.count++)
-      }.bind(this), 250)
-    },
+      // element fully prepared
+      ready: function() {
+        console.log('all set to go!');
+        // this.cycle will update the count attribute of our element
+        this.cycle = setInterval(function(){
+          this.setAttribute('count', this.count++)
+        }.bind(this), 250)
+      },
 
-    // element is in the DOM
-    attached: function() {
-      console.log('added to the DOM!');
-    },
+      // element is in the DOM
+      attached: function() {
+        console.log('added to the DOM!');
+      },
 
-    // element is removed from the DOM
-    detached: function() {
-      clearInterval(this.cycle);
-      console.log('removed from the DOM!');
-    },
+      // element is removed from the DOM
+      detached: function() {
+        clearInterval(this.cycle);
+        console.log('removed from the DOM!');
+      },
 
-    // element attribute was changed
-    attributeChanged: function(attr, oldVal, newVal) {
-      console.log('an attribute changed!');
-    }
+      // element attribute was changed
+      attributeChanged: function(attr, oldVal, newVal) {
+        console.log('an attribute changed!');
+      }
 
-  });
-</script>
+    });
+  </script>
 </polymer-element>
