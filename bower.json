@@ -1,0 +1,18 @@
+{
+  "name": "Polymer101",
+  "version": "0.0.1",
+  "authors": [
+    "Joe Maddalone <joe@insert-title.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.5"
+  }
+}
