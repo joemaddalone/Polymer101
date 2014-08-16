@@ -1,10 +1,10 @@
-<polymer-element name="hello" attributes="count name">
+<polymer-element name="hello-element" attributes="count name">
 <template>
   <h1>{{count}} Hello {{name}}</h1>
   <button on-click="{{remove}}">remove</button>
 </template>
 <script>
-  Polymer('hello', {
+  Polymer('hello-element', {
 
     // element is created
     created: function() {
