@@ -1,0 +1,15 @@
+<link rel="import" href="./hello.html" />
+<polymer-element name="app-element" attributes="">
+  <template>
+    <template repeat="{{person, index in people}}">
+      <hello-element name={{person}} count={{index}}></hello-element>
+    </template>
+  </template>
+  <script>
+    Polymer('app-element', {
+      ready: function(){
+        this.people = ['Joe', 'John', 'Jim'];
+      }
+    });
+  </script>
+</polymer-element>
