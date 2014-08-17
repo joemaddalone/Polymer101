@@ -21,7 +21,7 @@
         console.log('all set to go!');
         // this.cycle will update the count attribute of our element
         this.cycle = setInterval(function(){
-          this.setAttribute('count', this.count++)
+          this.count = +this.count+1
         }.bind(this), 250)
       },
 
