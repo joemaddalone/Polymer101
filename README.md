@@ -30,5 +30,5 @@ git checkout 3-TemplateRepeat
 ####  Lesson 4: Adding JS Dependencies ####
 
 ```
-git checkout 3-jsDependency
+git checkout 4-jsDependency
 ```
