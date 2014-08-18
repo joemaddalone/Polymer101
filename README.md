@@ -32,3 +32,9 @@ git checkout 3-TemplateRepeat
 ```
 git checkout 4-jsDependency
 ```
+
+####  Lesson 5: Custom Filters ####
+
+```
+git checkout 5-filters
+```
