@@ -6,8 +6,27 @@
   <script src="bower_components/platform/platform.js"></script>
   <script src="bower_components/polymer/polymer.js"></script>
   <link rel="import" href="./component/counter.html" />
+  <style>
+    ._0 {color: green}
+    ._1 {color: red}
+  </style>
 </head>
 <body>
-  <counter-element></counter-element>
+  <script>
+    window.addEventListener('polymer-ready', function(e) {
+
+      // here we can utilize all of the familiar DOM operations
+      // we expect from native HTML components
+
+      var ce = document.createElement('counter-element');
+      document.body.appendChild(ce);
+
+      setInterval(function(){
+        ce.count++;
+        ce.setAttribute('class', '_' + ce.count % 2)
+      }, 500);
+
+    });
+  </script>
 </body>
 </html>
