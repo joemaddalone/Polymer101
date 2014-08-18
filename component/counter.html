@@ -1,0 +1,49 @@
+<polymer-element name="counter-element" attributes="count">
+  <template>
+    <button on-click="{{btnClick}}">{{count}}</button>
+    <input type="number" value="{{multiplier}}" />
+    <span>{{count*multiplier}}</span>
+  </template>
+  <script>
+    Polymer('counter-element', {
+      count: 0,
+      multiplier: 1,
+
+      // observe will override automatic property watchers
+      observe: {
+        //multiplier: 'observeChange',
+        //count: 'observeChange'
+      },
+
+      ready: function() {
+        console.log('all set to go!');
+      },
+
+      btnClick: function() {
+        this.count++;
+      },
+
+      // auto-magic watcher
+      countChanged: function(oldVal, newVal) {
+        if(oldVal !== newVal) {
+          console.log('count changed');
+        }
+      },
+
+      // auto-magic watcher
+      multiplierChanged: function(oldVal, newVal) {
+        if(oldVal !== newVal) {
+          console.log('multiplier changed');
+        }
+      },
+
+      // not so auto-magic
+      observeChange: function(oldVal, newVal) {
+        if(oldVal !== newVal ) {
+          console.log('observeChange, not <propertyName>Changed');
+        }
+      }
+
+    });
+  </script>
+</polymer-element>
