@@ -39,6 +39,13 @@ git checkout 4-jsDependency
 git checkout 5-filters
 ```
 
+####  Lesson 6: Property Observation ####
+
+```
+git checkout 6-PropertyObservation
+
+```
+
 ####  Lesson 7: polymer-ready ####
 
 ```
