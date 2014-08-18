@@ -1,6 +1,7 @@
-<polymer-element name="hello-element" attributes="count name">
+<link rel="import" href="../filters/filters.html" />
+<polymer-element name="hello-element" attributes="count fname lname">
   <template>
-    <h1>{{count}} Hello {{name}}</h1>
+    <h4>{{count}} Hello {{fname}} {{lname | uppercase}}</h4>
     <button on-click="{{remove}}">remove</button>
   </template>
   <script>
@@ -19,10 +20,6 @@
       // element fully prepared
       ready: function() {
         console.log('all set to go!');
-        // this.cycle will update the count attribute of our element
-        this.cycle = setInterval(function(){
-          this.count = +this.count+1
-        }.bind(this), 250)
       },
 
       // element is in the DOM

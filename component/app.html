@@ -1,9 +1,16 @@
+
 <script src="../bower_components/superagent/superagent.js"></script>
 <link rel="import" href="./hello.html" />
 <polymer-element name="app-element" attributes="people">
   <template>
+    <h2>Ordered</h2>
+    <template repeat="{{person, index in people | orderBy('lname')}}">
+      <hello-element fname={{person.fname}} lname={{person.lname}} count={{index}}></hello-element>
+    </template>
+    <hr />
+    <h2>Unordered</h2>
     <template repeat="{{person, index in people}}">
-      <hello-element name={{person.fname}} count={{index}}></hello-element>
+      <hello-element fname={{person.fname}} lname={{person.lname}} count={{index}}></hello-element>
     </template>
   </template>
   <script>
@@ -15,7 +22,7 @@
       },
 
       getPeople: function(){
-        superagent.get('http://www.filltext.com/?rows=3&fname={firstName}', function(res){
+        superagent.get('http://www.filltext.com/?rows=3&fname={firstName}&lname={lastName}', function(res){
           this.setAttribute('people', res.text)
         }.bind(this))
 
