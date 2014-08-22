@@ -1,0 +1,12 @@
+<polymer-element name="x-reverser" extends="button" on-click={{clicky}}>
+  <template>
+    <content></content>
+  </template>
+    <script>
+    Polymer('x-reverser', {
+      clicky: function(){
+        this.innerHTML = this.innerHTML.split('').reverse().join('')
+      }
+    });
+  </script>
+</polymer-element>
