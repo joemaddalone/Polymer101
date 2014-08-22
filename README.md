@@ -51,3 +51,9 @@ git checkout 6-PropertyObservation
 ```
 git checkout 7-polymer-ready
 ```
+
+####  Lesson 8: Extend native HTML ####
+
+```
+git checkout 8-extendHTML
+```
