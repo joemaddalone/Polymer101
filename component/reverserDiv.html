@@ -1,0 +1,9 @@
+<link rel="import" href="./reverserMixin.html">
+<polymer-element name="reverser-div" extends="div" on-click={{clicky}}>
+  <template>
+    <content></content>
+  </template>
+    <script>
+    Polymer('reverser-div', Platform.mixin({}, reverserMixin))
+  </script>
+</polymer-element>

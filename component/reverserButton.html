@@ -1,0 +1,9 @@
+<link rel="import" href="./reverserMixin.html">
+<polymer-element name="reverser-button" extends="button" on-click={{clicky}}>
+  <template>
+    <content></content>
+  </template>
+    <script>
+    Polymer('reverser-button', Platform.mixin({}, reverserMixin))
+  </script>
+</polymer-element>
