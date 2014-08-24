@@ -57,3 +57,9 @@ git checkout 7-polymer-ready
 ```
 git checkout 8-extendHTML
 ```
+
+####  Lesson 9: Extend multiple HTML with Mixins ####
+
+```
+git checkout 9-Mixins
+```
